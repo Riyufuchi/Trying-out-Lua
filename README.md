@@ -2,7 +2,7 @@
 <table>
   <tr>
     <th>.lua file</th>
-    <th>Description</th>
+    <th>Short description</th>
   </tr>
   <tr>
     <th>demo</th>
