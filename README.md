@@ -1,4 +1,6 @@
 # Trying-out-Lua
+* Tested on Ubuntu 20.04.3
+<hr>
 <table>
   <tr>
     <th>.lua file</th>
