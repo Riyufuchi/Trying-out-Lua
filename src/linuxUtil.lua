@@ -1,4 +1,4 @@
-local linuxUtil =  {}
+local linuxUtil = {}
 local code = require("code")
 
 function linuxUtil.update(cleanAfter)
@@ -34,11 +34,10 @@ function linuxUtil.updateColored(cleanAfter)
 		if(os.execute("sudo apt-get autoremove")) then
 			code.coloredText(0, 255, 0, "Autoremove done!")
 		end
-		if("sudo apt-get clean") then
+		if(os.execute("sudo apt-get clean")) then
 				code.coloredText(0, 255, 0, "Clean done!")
-			end
+		end
 	end
-
 end
 
 return linuxUtil
