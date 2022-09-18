@@ -6,7 +6,7 @@ function linuxUtil.updateColored(cleanAfter)
 
 	OS_command("sudo apt update")
 	OS_command("sudo apt upgrade")
-	OS_command("sudo apt-get dist-upgrade")
+	OS_command("sudo apt dist-upgrade")
 
 	if(clean) then
 		code.coloredText(255, 255, 0, "Cleaning started")
