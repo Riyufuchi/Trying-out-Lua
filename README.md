@@ -1,5 +1,17 @@
 # Trying-out-Lua
-* Tested on Ubuntu 20.04.3
+<table>
+  <tr>
+    <th colspan="2">Tested on</th>
+  </tr>
+  <tr>
+    <th>OS</th>
+    <th>Lua version</th>
+  </tr>
+  <tr>
+    <td>Ubuntu 22.04</td>
+    <td>5.4.3</td>
+  </tr>
+</table>
 <hr>
 <table>
   <tr>
@@ -20,7 +32,11 @@
   </tr>
   <tr>
     <th>linuxUtil</th>
-    <th>some useful methods for linux (now only for update)</th>
+    <th>Some useful methods for linux (now only for update)</th>
   </tr>
+	<tr>
+		<th>console</th>
+		<th>Some useful methods for working with console IO</th>
+	</tr>
 </table>
 <hr>

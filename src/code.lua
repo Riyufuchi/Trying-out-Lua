@@ -1,4 +1,4 @@
-local code =  {}
+local code = {}
 
 function code.createHeader(a)
 	max = string.len(a)
