@@ -4,10 +4,9 @@ function code.createHeader(a)
 	max = string.len(a)
 	line = "";
 	for i = 1, max do
-		io.write("-")
 		line = line .. "-"
 	end
-	io.write("\n" .. a .. "\n" .. line .. "\n" .. "\a") --\a -> bell
+	io.write(line .. "\n" .. a .. "\n" .. line .. "\n" .. "\a") --\a -> bell
 end
 
 function code.createColoredHeader(r, g, b, text)

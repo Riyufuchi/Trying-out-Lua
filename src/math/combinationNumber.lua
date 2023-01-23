@@ -2,23 +2,13 @@ local comb = {}
 local fac = require("factorial")
 
 function comb.combinationNumber(n, k)
-	if (k == 0) then
-		return 1;
-	end
-	if (k == 0 and n == 0) then
-		return 1;
-	end
-	if (k == n) then
+	if (k == 0) or (k == n) then -- and ifk and n equals 0
 		return 1;
 	end
 	if (k == 1) then
 		return n;
 	end
-
-	nF = fac.factorial(n)
-	kF = fac.factorial(k)
-
-	return nF / (kF * fac.factorial(n - k)) 
+	return fac.factorial(n) / (fac.factorial(k) * fac.factorial(n - k))
 end
 
 return comb
