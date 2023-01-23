@@ -38,5 +38,9 @@
 		<th>console</th>
 		<th>Some useful methods for working with console IO</th>
 	</tr>
+	<tr>
+		<th>math/*.lua</th>
+		<th>Some functions for math</th>
+	</tr>
 </table>
 <hr>
