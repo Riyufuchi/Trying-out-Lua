@@ -1,6 +1,7 @@
 local bi = require("binomicDist")
+local fce = require("f")
 package.path = package.path .. ";../?.lua"
-local conUtil = require("code")
+local conUtil = require("utilsCLI/code")
 
 function main()
 	result = 0
@@ -13,6 +14,17 @@ function main()
 		result = result + pX * 100
 	end
 	conUtil.createHeader("P(p(2) ⋃  p(3) ⋃  p(4) ⋃  p(5)) = " .. result .. "%")
+	printFceToFile()
+end
+
+function printFceToFile()
+	file = io.open("functionXY.csv", "w+")
+	file:write("x;y\n")
+	for i = -20, 20 do
+		file:write(i..";"..(fce.f(i)).."\n")
+	end
+	file:close() --close file
+	print("Done!")
 end
 
 main()
