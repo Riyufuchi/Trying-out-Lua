@@ -1,1 +1,5 @@
-linuxUtilOld.lua
+#Folders
+bin/
+
+#File types
+*.csv

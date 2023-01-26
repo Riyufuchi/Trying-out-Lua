@@ -1,6 +1,6 @@
 local linuxUtil = {}
-local code = require("code")
-local console = require("console")
+local code = require("utilsCLI/code")
+local console = require("utilsCLI/console")
 
 function linuxUtil.updateColored(cleanAfter)
 	clean = cleanAfter or false

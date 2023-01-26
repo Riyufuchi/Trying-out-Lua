@@ -11,8 +11,8 @@ function Color:new(o, r, g, b)
 end
 
 function Color:getColor()
-	rgb = {self.red, self.green, self.blue}
-	return rgb
+ rgb = {self.red, self.green, self.blue}
+ return rgb
 end
 
 return Color
