@@ -1,16 +1,16 @@
 # Trying-out-Lua
 <table>
-  <tr>
-    <th colspan="2">Tested on</th>
-  </tr>
-  <tr>
-    <th>OS</th>
-    <th>Lua version</th>
-  </tr>
-  <tr>
-    <td>Ubuntu 22.04</td>
-    <td>5.4.3</td>
-  </tr>
+    <tr>
+        <th colspan="2">Tested on</th>
+    </tr>
+     <tr>
+        <th>OS</th>
+        <th>Lua version</th>
+    </tr>
+    <tr>
+        <td>Ubuntu 22.04</td>
+        <td>5.4.3</td>
+    </tr>
 </table>
 <hr>
 
@@ -28,48 +28,48 @@ gnome-terminal --tab --title="Title" --command="bash -c 'lua demo.lua; $SHELL'"
 ### Content
 
 <table>
-	<tr>
-		<th colspan=3>Project sructure map</th>
-	</tr>
-	<!-- root -->
-	<tr>
-		<th>Folder</th>
-		<th>Lua file</th>
-		<th>Short description</th>
-	</tr>
-  	<tr>
-		<th rowspan=2>"root"</th>
-    		<th>demo</th>
-    		<th>Contains main method</th>
-  	</tr>
-	<tr>
-    		<th>linuxUtil</th>
-    		<th>Some useful methods for linux (now only for update)</th>
-	</tr>
-	<!-- utilsCLI -->
-  	<tr>
-		<th rowspan=3>utilsCLI</th>
-    		<th>code</th>
-    		<th>Functions for cloloring text in console (for linux and maybe Mac)</th>
-  	</tr>
-  	<tr>
-		<th>Color</th>
-		<th>Color class</th>
- 	</tr>
-	<tr>
-		<th>console</th>
-		<th>Some useful methods for working with console IO</th>
-	</tr>
-	<!-- math -->
-	<tr>
-		<th rowspan=1>math</th>
-		<th>*.lua</th>
-		<th>Some functions for math</th>
-	</tr>
-	<!-- table end -->
-	<tr>
-		<th colspan=3>This table might not be up to date</th>
-	</tr>
+    <tr>
+        <th colspan=3>Project sructure map</th>
+    </tr>
+    <!-- root -->
+    <tr>
+        <th>Folder</th>
+        <th>Lua file</th>
+        <th>Short description</th>
+    </tr>
+    <tr>
+        <th rowspan=2>"root"</th>
+        <th>demo</th>
+        <th>Contains main method</th>
+    </tr>
+    <tr>
+        <th>linuxUtil</th>
+        <th>For updating Linux OS)</th>
+    </tr>
+    <!-- utilsCLI -->
+    <tr>
+        <th rowspan=3>utilsCLI</th>
+        <th>code</th>
+        <th>Functions for cloloring text in console (for Linux and posibly MacOS)</th>
+    </tr>
+    <tr>
+        <th>Color</th>
+        <th>Color class</th>
+    </tr>
+    <tr>
+        <th>console</th>
+        <th>Some useful methods for working with console IO</th>
+    </tr>
+    <!-- math -->
+    <tr>
+        <th rowspan=1>math</th>
+        <th>*.lua</th>
+        <th>Some functions for math</th>
+    </tr>
+    <!-- table end -->
+    <tr>
+        <th colspan=3>This table might not be up to date</th>
+    </tr>
 </table>
 <hr>
 
