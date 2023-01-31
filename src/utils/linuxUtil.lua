@@ -8,7 +8,7 @@ function linuxUtil.updateColored(cleanAfter)
 	OS_command("sudo apt update")
 	OS_command("sudo apt upgrade")
 	OS_command("sudo apt dist-upgrade")
-	if(console.askUser("Manual package install? [Y/n]")) then
+	if (console.askUser("Manual package install? [Y/n]")) then
 		io.write("Intput list of packages -> package1 package2...\n")
 		addMultiplePackages(io.read())
 	end
@@ -18,7 +18,7 @@ function linuxUtil.updateColored(cleanAfter)
 		code.coloredText(255, 255, 0, "Cleaning finished!")
 	end
 	code.coloredText(0, 255, 255, "Finished update sequence.")
-	if(console.askUser("Restart now? [Y/n]")) then
+	if (console.askUser("Restart now? [Y/n]")) then
 		OS_command("sudo shutdown -r")
 	end
 end
@@ -26,15 +26,15 @@ end
 function addMultiplePackages(packageList)
 	--the "[^%s]+" pattern matches to every non-empty string in between space characters
 	for token in string.gmatch(packageList, "[^%s]+") do
-		OS_command("sudo apt install " .. token)
+		OS_command("sudo apt install "..token)
 	end
 end
 
 function OS_command(command)
-	if(os.execute(command)) then
-		code.coloredText(0, 255, 0, command .. " - done!")
+	if (os.execute(command)) then
+		code.coloredText(0, 255, 0, command.." - done!")
 	else
-		code.coloredText(255, 0, 0, "Problem has occured during: " .. command)
+		code.coloredText(255, 0, 0, "Problem has occured during: "..command)
 	end
 end
 

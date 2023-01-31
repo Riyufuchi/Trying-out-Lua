@@ -15,8 +15,8 @@
 <hr>
 
 ### Create executable
-1. There are more terminal options in linux, this is just example
-2. Specify path to "main" lua file "cd /path/folder;"
+1. There are more terminal options in Linux, this is just example
+2. Specify path to "main" Lua file "cd /path/folder;"
 
 Create .sh file with following code:  
 ```shell
@@ -29,28 +29,42 @@ gnome-terminal --tab --title="Title" --command="bash -c 'lua demo.lua; $SHELL'"
 
 <table>
     <tr>
-        <th colspan=3>Project sructure map</th>
+        <th colspan=3>Project structure map</th>
     </tr>
-    <!-- root -->
     <tr>
         <th>Folder</th>
         <th>Lua file</th>
         <th>Short description</th>
     </tr>
+    <!-- programMains -->
     <tr>
-        <th rowspan=2>"root"</th>
+        <th rowspan=2>programMains</th>
         <th>demo</th>
         <th>Contains main method</th>
     </tr>
     <tr>
+        <th>mathDemo</th>
+        <th>Some math stuff showcase</th>
+    </tr>
+    <tr>
+        <th>benchmarkDemo</th>
+        <th>Showcase of multiple functionalities as sorting algorithm "benchmarks"</th>
+    </tr>
+    <!-- utils -->
+    <tr>
+        <th rowspan=2>utils</th>
         <th>linuxUtil</th>
         <th>For updating Linux OS)</th>
+    </tr>
+    <tr>
+        <th>fileHeper</th>
+        <th>For better file handling</th>
     </tr>
     <!-- utilsCLI -->
     <tr>
         <th rowspan=3>utilsCLI</th>
         <th>code</th>
-        <th>Functions for cloloring text in console (for Linux and posibly MacOS)</th>
+        <th>Functions for coloring text in console (for Linux and possibly Mac OS)</th>
     </tr>
     <tr>
         <th>Color</th>

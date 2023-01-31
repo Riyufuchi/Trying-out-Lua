@@ -1,5 +1,5 @@
 local flag = {}
-symbols = {"░", "█", "★", "▒"}
+local symbols = {"░", "█", "★", "▒"}
 --starsX = {5, 4, 6, 3, 5, 7, 4, 6, 5}
 --12345678910
 --░░░░*░░░░░1
@@ -7,14 +7,14 @@ symbols = {"░", "█", "★", "▒"}
 --░░*░*░*░░░3
 --░░░*░*░░░░4
 --░░░░*░░░░░5
-starsX = {5, 3, 7, 1, 5, 9, 3, 7, 5} --this flag is from Fallout universe
+local starsX = {5, 3, 7, 1, 5, 9, 3, 7, 5} --this flag is from Fallout universe
 --12345678910
 --░░░░*░░░░░1
 --░░*░░░*░░░2
 --░*░░*░░*░░3
 --░░*░░░*░░░4
 --░░░░*░░░░░5
-rgb = {}
+local rgb = {}
 --Colored
 
 function flag.drawFlagColored()
@@ -26,7 +26,7 @@ end
 function secondHalfColored(width, height, index)
 	for j = 0, height do
 		for i = 0, width do
-			io.write("\27[38;2;" .. rgb[1] .. ";" .. rgb[2] .. ";" .. rgb[3] .. "m" .. symbols[2].. "\27[m")
+			io.write("\27[38;2;"..rgb[1]..";"..rgb[2]..";"..rgb[3].."m"..symbols[2].."\27[m")
 		end
 		io.write("\n")
 		if(((j % 2) + 1) > 1) then
@@ -47,14 +47,14 @@ function firstHalfColored(width, height)
   for j = 1, height do
     for i = 0, oneFourth do
         if(i == starsX[indexS]) then
-          io.write("\27[38;2;" .. 255 .. ";" .. 255 .. ";" .. 255 .. "m" .. symbols[3].. "\27[m")
+          io.write("\27[38;2;"..255..";"..255..";"..255.."m"..symbols[3].."\27[m")
           indexS = indexS + 1
         else
-          io.write("\27[38;2;" .. 0 .. ";" .. 0 .. ";" .. 255 .. "m" .. symbols[1].. "\27[m")
+          io.write("\27[38;2;"..0..";"..0..";"..255.."m"..symbols[1].."\27[m")
         end
     end
     for i = 1, threeFourth do
-        io.write("\27[38;2;" .. rgb[1] .. ";" .. rgb[2] .. ";" .. rgb[3] .. "m" .. symbols[2].. "\27[m")
+        io.write("\27[38;2;"..rgb[1]..";"..rgb[2]..";"..rgb[3].."m"..symbols[2].."\27[m")
     end
     io.write("\n")
     if(((j % 2) + 1) > 1) then
@@ -79,7 +79,7 @@ function secondHalf(width, height, index)
     for i = 0, width do
         line = line .. symbols[index]
     end
-    io.write(line .. "\n")
+    io.write(line.."\n")
     line = ""
     index = (j % 2) + 1
     if(index > 1) then
@@ -108,7 +108,7 @@ function firstHalf(width, height)
     for i = 1, threeFourth do
         line = line .. symbols[index]
     end
-    io.write(line .. "\n")
+    io.write(line.."\n")
     line = ""
     index = (j % 2) + 1
     if(index > 1) then
@@ -117,4 +117,5 @@ function firstHalf(width, height)
   end
   secondHalf(width, height, index)
 end
+
 return flag
