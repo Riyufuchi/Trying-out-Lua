@@ -38,7 +38,7 @@ gnome-terminal --tab --title="Title" --command="bash -c 'lua demo.lua; $SHELL'"
     </tr>
     <!-- programMains -->
     <tr>
-        <th rowspan=2>programMains</th>
+        <th rowspan=3>programMains</th>
         <th>demo</th>
         <th>Contains main method</th>
     </tr>
