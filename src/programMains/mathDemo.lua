@@ -4,6 +4,7 @@ local fce = require("math/f")
 local conUtil = require("utilsCLI/code")
 local qSort = require("sorting/quickSort")
 local bSort = require("sorting/bubbleSort")
+local fileHelper = require("utils/fileHelper")
 
 function main()
 	result = 0
@@ -16,11 +17,13 @@ function main()
 		result = result + pX * 100
 	end
 	conUtil.createHeader("P(p(2) ⋃  p(3) ⋃  p(4) ⋃  p(5)) = " .. result .. "%")
-	fX = funcVals(-10, 10)
-	printFceToFile(fX)
+	print("\n")
+	conUtil.createHeader("\v f(x) = 100*x^4 + 2550*x^3 + 13400*x^2 - 55050*x - 297000\v")
+	fX = funcVals(-100, 100)
+	--printFceToFile(fX)
 	qSort.sort(fX)
 	lenV = #fX
-	print("Sorted")
+	conUtil.createHeader("\v  Sorted\v")
 	for ind = 1, lenV do
 		print(fX[ind])
 	end
@@ -32,7 +35,7 @@ function funcVals(from, to)
 	index = 1
 	for i = from, to do
 		vals[index] = fce.f(i)
-		print(vals[index])
+		print("f("..i..") = "..vals[index])
 		index = index + 1
 	end
 	return vals
@@ -40,10 +43,11 @@ end
 
 function printFceToFile(arr)
 	fileName = "../bin/outputs/functionXY.csv"
-	file = io.open(fileName, "w+")
-	file:write("x;y;\n")
-	print(tonumber(string.sub(arr[0], 0, string.find(arr[0], ";") - 1)))
-	for i = tonumber(string.sub(arr[0], 0, string.find(arr[0], ";") - 1)), string.sub(arr[0], string.find(arr[0], ";") + 1, #arr[0]) do
+	file = fileHelper.openFile(fileName)
+	if not file then return nil end
+	file:write("x;y\n")
+	for i = tonumber(string.sub(arr[0], 0, string.find(arr[0], ";") - 1)),
+	  string.sub(arr[0], string.find(arr[0], ";") + 1, #arr[0]) do
 		file:write(i..";"..(fce.f(i)).."\n")
 	end
 	file:close() --close file
