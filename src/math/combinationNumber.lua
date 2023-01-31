@@ -1,5 +1,5 @@
 local comb = {}
-local fac = require("factorial")
+local fac = require("math/factorial")
 
 function comb.combinationNumber(n, k)
 	if (k == 0) or (k == n) then -- and ifk and n equals 0

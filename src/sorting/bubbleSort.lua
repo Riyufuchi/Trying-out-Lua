@@ -10,11 +10,11 @@ function bubbleSort.sort(pArr)
 	if len <= 1 then
 		return arr
 	end
-	sorter(1, len)
+	bubbleSort.sorter(1, len)
 	return arr
 end
 
-function sorter(indexMin, indexMax)
+function bubbleSort.sorter(indexMin, indexMax)
 	local change = true
 	while change do
 		change = false

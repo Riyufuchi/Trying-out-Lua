@@ -3,7 +3,7 @@ local arr = {}
 
 --"However, it is customary in Lua to start arrays with index 1.
 --The Lua libraries adhere to this convention;
---so, if your arrays also start with 1, you will be able to use their functions directly.""
+--so, if your arrays also start with 1, you will be able to use their functions directly."
 --	-https://www.lua.org/pil/11.1.html
 function quickSort.sort(pArr)
 	if pArr == nil then
@@ -14,15 +14,15 @@ function quickSort.sort(pArr)
 	if len <= 1 then
 		return arr
 	end
-	sorter(1, len)
+	quickSort.sorter(1, len)
 	return arr
 end
 
-function sorter(indexMin, indexMax)
+function quickSort.sorter(indexMin, indexMax)
 	if indexMin < indexMax then
 		separation = partion(indexMin, indexMax)
-		sorter(indexMin, separation - 1)
-		sorter(separation + 1, indexMax)
+		quickSort.sorter(indexMin, separation - 1)
+		quickSort.sorter(separation + 1, indexMax)
 	end
 end
 

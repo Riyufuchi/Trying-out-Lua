@@ -1,8 +1,9 @@
 package.path = package.path .. ";../?.lua"
-local bi = require("binomicDist")
-local fce = require("f")
+local bi = require("math/binomicDist")
+local fce = require("math/f")
 local conUtil = require("utilsCLI/code")
 local qSort = require("sorting/quickSort")
+local bSort = require("sorting/bubbleSort")
 
 function main()
 	result = 0
@@ -38,7 +39,7 @@ function funcVals(from, to)
 end
 
 function printFceToFile(arr)
-	fileName = "functionXY.csv"
+	fileName = "../bin/outputs/functionXY.csv"
 	file = io.open(fileName, "w+")
 	file:write("x;y;\n")
 	print(tonumber(string.sub(arr[0], 0, string.find(arr[0], ";") - 1)))
