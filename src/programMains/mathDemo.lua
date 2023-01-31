@@ -19,8 +19,8 @@ function main()
 	conUtil.createHeader("P(p(2) ⋃  p(3) ⋃  p(4) ⋃  p(5)) = " .. result .. "%")
 	print("\n")
 	conUtil.createHeader("\v f(x) = 100*x^4 + 2550*x^3 + 13400*x^2 - 55050*x - 297000\v")
-	fX = funcVals(-100, 100)
-	--printFceToFile(fX)
+	fX = funcVals(-10, 10)
+	printFceToFile(fX)
 	qSort.sort(fX)
 	lenV = #fX
 	conUtil.createHeader("\v  Sorted\v")
@@ -42,13 +42,15 @@ function funcVals(from, to)
 end
 
 function printFceToFile(arr)
-	fileName = "../bin/outputs/functionXY.csv"
-	file = fileHelper.openFile(fileName)
+	local fileName = "../bin/outputs/functionXY.csv"
+	local file = fileHelper.openFile(fileName, "w+")
 	if not file then return nil end
 	file:write("x;y\n")
+	local index = 1
 	for i = tonumber(string.sub(arr[0], 0, string.find(arr[0], ";") - 1)),
 	  string.sub(arr[0], string.find(arr[0], ";") + 1, #arr[0]) do
-		file:write(i..";"..(fce.f(i)).."\n")
+		file:write(i..";"..arr[index].."\n")
+		index = index + 1
 	end
 	file:close() --close file
 	print("File "..fileName.." is done!")

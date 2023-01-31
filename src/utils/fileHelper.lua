@@ -19,22 +19,14 @@ function fileHelper.readFile(fileName) --load file into table and returns it
 	return content
 end
 
-function fileHelper.writeFile(fileName, output)
-	fileHelper.writeFile(fileName, output, 1)
-end
-
 function fileHelper.writeFile(fileName, output, startIndex)
-	local file = fileHelper.openFile(fileName)
+	local file = fileHelper.openFile(fileName, "w+")
 	if not file then return nil end
 	local maxIndex = #output
 	for i = startIndex, maxIndex do
 		file:write(output[i] .."\n")
 	end
 	file:close()
-end
-
-function fileHelper.openFile(fileName)
-	return fileHelper.openFile(fileName, "w+")
 end
 
 function fileHelper.openFile(fileName, mode)
