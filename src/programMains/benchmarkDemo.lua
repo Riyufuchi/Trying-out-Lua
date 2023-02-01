@@ -8,8 +8,8 @@ function main()
 	fileContent = fileHelper.readFile("../bin/outputs/functionXY.csv")
 	numbers1 = {}
 	len = #fileContent
-	for i = 1, len-1 do
-		numbers1[i] = string.sub(fileContent[i+1], string.find(fileContent[i+1], ";") + 1, #fileContent[i+1])
+	for i = 1, len - 1 do
+		numbers1[i] = string.sub(fileContent[i + 1], string.find(fileContent[i + 1], ";") + 1, #fileContent[i + 1])
 	end
 	numbers2 = table.clone(numbers1)
 	--numbers2[0] = numbers1[0]

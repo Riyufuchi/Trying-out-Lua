@@ -47,10 +47,10 @@ function firstHalfColored(width, height)
   for j = 1, height do
     for i = 0, oneFourth do
         if(i == starsX[indexS]) then
-          io.write("\27[38;2;"..255..";"..255..";"..255.."m"..symbols[3].."\27[m")
+          io.write("\27[38;2;"..(255)..";"..(255)..";"..(255).."m"..symbols[3].."\27[m")
           indexS = indexS + 1
         else
-          io.write("\27[38;2;"..0..";"..0..";"..255.."m"..symbols[1].."\27[m")
+          io.write("\27[38;2;"..(0)..";"..(0)..";"..(255).."m"..symbols[1].."\27[m")
         end
     end
     for i = 1, threeFourth do

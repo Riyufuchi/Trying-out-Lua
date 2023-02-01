@@ -40,7 +40,7 @@ gnome-terminal --tab --title="Title" --command="bash -c 'lua demo.lua; $SHELL'"
     <tr>
         <th rowspan=3>programMains</th>
         <th>demo</th>
-        <th>Contains main method</th>
+        <th>Utility for Linux updating using terminal</th>
     </tr>
     <tr>
         <th>mathDemo</th>
