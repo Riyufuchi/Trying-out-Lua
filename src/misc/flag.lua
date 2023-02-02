@@ -18,12 +18,10 @@ local rgb = {}
 --Colored
 
 function flag.drawFlagColored()
-	width = 40
-	height = 11
-	firstHalfColored(width, height)
+	firstHalfColored(40, 11)
 end
 
-function secondHalfColored(width, height, index)
+function secondHalfColored(width, height, index, rgb)
 	for j = 0, height do
 		for i = 0, width do
 			io.write("\27[38;2;"..rgb[1]..";"..rgb[2]..";"..rgb[3].."m"..symbols[2].."\27[m")
@@ -38,12 +36,12 @@ function secondHalfColored(width, height, index)
 end
 
 function firstHalfColored(width, height)
-  oneFourth = width / 4
-  threeFourth = width - oneFourth
-  height = height / 2
-  index = 1
-  indexS = 1
-  rgb = {255, 0, 0}
+  local oneFourth = width / 4
+  local threeFourth = width - oneFourth
+  local height = height / 2
+  local index = 1
+  local indexS = 1
+  local rgb = {255, 0, 0}
   for j = 1, height do
     for i = 0, oneFourth do
         if(i == starsX[indexS]) then
@@ -63,15 +61,13 @@ function firstHalfColored(width, height)
       rgb = {255, 0, 0}
     end
   end
-  secondHalfColored(width, height, index)
+  secondHalfColored(width, height, index, rgb)
 end
 
 --ASCII only
 
 function flag.drawFlag()
-  width = 40
-  height = 11
-  firstHalf(width, height)
+	firstHalf(40, 11)
 end
 
 function secondHalf(width, height, index)
@@ -89,12 +85,12 @@ function secondHalf(width, height, index)
 end
 
 function firstHalf(width, height)
-  oneFourth = width / 4
-  threeFourth = width - oneFourth
-  height = height / 2
-  index = 1
-  indexS = 1
-  line = ""
+  local oneFourth = width / 4
+  local threeFourth = width - oneFourth
+  local height = height / 2
+  local index = 1
+  local indexS = 1
+  local line = ""
   --if(oneFourth + threeFourth == 40)then io.write("LOL") end
   for j = 1, height do
     for i = 0, oneFourth do

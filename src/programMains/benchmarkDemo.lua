@@ -18,9 +18,9 @@ function main()
 	qSortFunc = function(param) qSort.sort(param) end
 	qSortV2Func = function(param) qSort2.sort(param) end
 	bSortFunc = function(param) bSort.sort(param) end
-	makro(qSortFunc, "QuickSort")
-	makro(qSortV2Func, "QuickSort2")
-	makro(bSortFunc, "BubbleSort")
+	makro(qSortFunc, numbers1, "QuickSort")
+	makro(qSortV2Func, numbers2, "QuickSort2")
+	makro(bSortFunc, numbers3, "BubbleSort")
 end
 
 function makro(sortFunc, data, label)
@@ -28,7 +28,7 @@ function makro(sortFunc, data, label)
 	timeStart = os.clock()
 	sortFunc(data)
 	timeEnd = os.clock()
-	print(label..": "..endTime.." - "..startTime.." = "..string.format("%f", (endTime - startTime)))
+	print(label..": "..timeEnd.." - "..timeStart.." = "..string.format("%f", (timeEnd - timeStart)))
 end
 
 function table.clone(orginalTable)

@@ -10,7 +10,7 @@ function quickSort.sort(pArr)
 		pArr = { -1 }
 	end
 	arr = pArr
-	len = #arr
+	local len = #arr
 	if len <= 1 then
 		return arr
 	end
