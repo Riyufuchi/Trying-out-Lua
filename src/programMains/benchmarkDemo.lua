@@ -13,8 +13,6 @@ function main()
 	end
 	numbers2 = table.clone(numbers1)
 	numbers3 = table.clone(numbers1)
-	--numbers2[0] = numbers1[0]
-	--print(numbers1[1].." "..numbers2[1])
 	qSortFunc = function(param) qSort.sort(param) end
 	qSortV2Func = function(param) qSort2.sort(param) end
 	bSortFunc = function(param) bSort.sort(param) end

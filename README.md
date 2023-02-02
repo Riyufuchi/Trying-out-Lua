@@ -50,6 +50,16 @@ gnome-terminal --tab --title="Title" --command="bash -c 'lua demo.lua; $SHELL'"
         <th>benchmarkDemo</th>
         <th>Showcase of multiple functionalities as sorting algorithm "benchmarks"</th>
     </tr>
+    <!-- misc -->
+    <tr>
+        <th rowspan=2>misc</th>
+        <th>miscFuncs</th>
+        <th>Functions that would be otherwise deleted</th>
+    </tr>
+    <tr>
+        <th>flag</th>
+        <th>Flag from Fallout just for decorative purposes</th>
+    </tr>
     <!-- utils -->
     <tr>
         <th rowspan=2>utils</th>
@@ -79,6 +89,12 @@ gnome-terminal --tab --title="Title" --command="bash -c 'lua demo.lua; $SHELL'"
         <th rowspan=1>math</th>
         <th>*.lua</th>
         <th>Some functions for math</th>
+    </tr>
+    <!-- sorting -->
+    <tr>
+        <th rowspan=1>sorting</th>
+        <th>*.lua</th>
+        <th>Implementations of some sorting algorithms</th>
     </tr>
     <!-- table end -->
     <tr>
