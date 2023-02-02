@@ -28,8 +28,8 @@ function quickSortV2.sorter(indexMin, indexMax)
 			j = j - 1
 		end
 	end
-	if indexMin < j then partion(indexMin, j) end
-	if indexMax > i then partion(i, indexMax) end
+	if indexMin < j then quickSortV2.sorter(indexMin, j) end
+	if indexMax > i then quickSortV2.sorter(i, indexMax) end
 end
 
 return quickSortV2
