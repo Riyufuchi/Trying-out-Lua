@@ -27,24 +27,19 @@ function quickSort.sorter(indexMin, indexMax)
 end
 
 function partion(indexMin, indexMax)
-	i = indexMin
-	local pivot = choosePivot(indexMin, indexMax)
-	helper = 0
+	local i = indexMin
+	local pivot = arr[indexMax]
+	local helper = 0
 	for j = indexMin, indexMax - 1 do --because last is pivot in this case
 		if arr[j] <= pivot then
 			helper = arr[i]
 			arr[i] = arr[j]
 			arr[j] = helper
-			--or subArr[i], subArr[j] = subArr[j], subArr[i]
 			i = i + 1
 		end
 	end
 	arr[i], arr[indexMax] = arr[indexMax], arr[i]
 	return i
-end
-
-function choosePivot(indexMin, indexMax)
-	return arr[indexMax]
 end
 
 return quickSort

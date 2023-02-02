@@ -1,8 +1,8 @@
 package.path = package.path .. ";../?.lua"
 local qSort = require("sorting/quickSort")
+local qSort2 = require("sorting/quickSortV2")
 local bSort = require("sorting/bubbleSort")
 local fileHelper = require("utils/fileHelper")
-local bi = require("math/binomicDist")
 
 function main()
 	fileContent = fileHelper.readFile("../bin/outputs/functionXY.csv")
@@ -12,24 +12,30 @@ function main()
 		numbers1[i] = string.sub(fileContent[i + 1], string.find(fileContent[i + 1], ";") + 1, #fileContent[i + 1])
 	end
 	numbers2 = table.clone(numbers1)
+	numbers3 = table.clone(numbers1)
 	--numbers2[0] = numbers1[0]
 	--print(numbers1[1].." "..numbers2[1])
-	quickEndTime = 0
-	quickStartTime = os.clock()
+	timeEnd = 0
+	timeStart = os.clock()
 	qSort.sort(numbers1)
-	quickEndTime = os.clock()
+	timeEnd = os.clock()
+	showResult("QuickSort", timeStart, timeEnd)
 
-	bubbleEndTime = 0
-	bubbleStartTime = os.clock()
-	bSort.sort(numbers2)
-	bubbleEndTime = os.clock()
+	timeEnd = 0
+	timeStart = os.clock()
+	qSort2.sort(numbers2)
+	timeEnd = os.clock()
+	showResult("QuickSort2", timeStart, timeEnd)
 
-	showResult("QuickSort", quickStartTime, quickEndTime)
-	showResult("BubbleSort", bubbleStartTime, bubbleEndTime)
+	timeEnd = 0
+	timeStart = os.clock()
+	bSort.sort(numbers3)
+	timeEnd = os.clock()
+	showResult("BubbleSort", timeStart, timeEnd)
 end
 
 function showResult(label, startTime, endTime)
-	print(label.." "..endTime.." - "..startTime.." = "..string.format("%f", (endTime - startTime)))
+	print(label..": "..endTime.." - "..startTime.." = "..string.format("%f", (endTime - startTime)))
 end
 
 function table.clone(orginalTable)
