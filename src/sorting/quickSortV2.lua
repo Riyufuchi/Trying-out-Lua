@@ -20,12 +20,8 @@ function quickSortV2.sorter(indexMin, indexMax)
 	local j = indexMax
 	local pivot = arr[(indexMin + indexMax) // 2] -- // -> divide and remove mantisa
 	while i < j do
-		while arr[i] < pivot do
-			i = i + 1
-		end
-		while arr[j] > pivot do
-			j = j - 1
-		end
+		while arr[i] < pivot do i = i + 1 end
+		while arr[j] > pivot do j = j - 1 end
 		if i <= j then
 			arr[i], arr[j] = arr[j], arr[i]
 			i = i + 1

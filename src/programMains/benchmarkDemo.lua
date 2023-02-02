@@ -15,26 +15,19 @@ function main()
 	numbers3 = table.clone(numbers1)
 	--numbers2[0] = numbers1[0]
 	--print(numbers1[1].." "..numbers2[1])
-	timeEnd = 0
-	timeStart = os.clock()
-	qSort.sort(numbers1)
-	timeEnd = os.clock()
-	showResult("QuickSort", timeStart, timeEnd)
-
-	timeEnd = 0
-	timeStart = os.clock()
-	qSort2.sort(numbers2)
-	timeEnd = os.clock()
-	showResult("QuickSort2", timeStart, timeEnd)
-
-	timeEnd = 0
-	timeStart = os.clock()
-	bSort.sort(numbers3)
-	timeEnd = os.clock()
-	showResult("BubbleSort", timeStart, timeEnd)
+	qSortFunc = function(param) qSort.sort(param) end
+	qSortV2Func = function(param) qSort2.sort(param) end
+	bSortFunc = function(param) bSort.sort(param) end
+	makro(qSortFunc, "QuickSort")
+	makro(qSortV2Func, "QuickSort2")
+	makro(bSortFunc, "BubbleSort")
 end
 
-function showResult(label, startTime, endTime)
+function makro(sortFunc, data, label)
+	timeEnd = 0
+	timeStart = os.clock()
+	sortFunc(data)
+	timeEnd = os.clock()
 	print(label..": "..endTime.." - "..startTime.." = "..string.format("%f", (endTime - startTime)))
 end
 
