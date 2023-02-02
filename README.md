@@ -14,8 +14,9 @@
 </table>
 <hr>
 
-### Create executable
-1. There are more terminal options in Linux, this is just example
+### Create "executable"
+0. Note: You have to install Lua for this to work - [download Lua here](https://www.lua.org/download.html "https://www.lua.org/download")
+1. There are more terminal options in Linux, this is just example (you can use Lua on Windows too)
 2. Specify path to "main" Lua file "cd /path/folder;"
 
 Create .sh file with following code:  
