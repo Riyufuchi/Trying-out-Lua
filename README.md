@@ -9,7 +9,7 @@
     </tr>
     <tr>
         <td>Ubuntu 22.04</td>
-        <td>5.4.3</td>
+        <td>5.4.4</td>
     </tr>
 </table>
 <hr>

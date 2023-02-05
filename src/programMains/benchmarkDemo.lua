@@ -4,6 +4,8 @@ local qSort2 = require("sorting/quickSortV2")
 local bSort = require("sorting/bubbleSort")
 local fileHelper = require("utils/fileHelper")
 
+local times = {['QuickSort'] = 0, ['QuickSort2'] = 0, ['BubbleSort'] = 0}
+
 function main()
 	fileContent = fileHelper.readFile("../bin/outputs/functionXY.csv")
 	numbers1 = {}
@@ -26,11 +28,26 @@ function makro(sortFunc, data, label)
 	timeStart = os.clock()
 	sortFunc(data)
 	timeEnd = os.clock()
-	print(label..": "..timeEnd.." - "..timeStart.." = "..string.format("%f", (timeEnd - timeStart)))
+	timeFinal = timeEnd - timeStart
+	times[label] = times[label] + timeFinal
+	print(label..": "..timeEnd.." - "..timeStart.." = "..string.format("%f", timeFinal))
 end
 
 function table.clone(orginalTable)
 	return {table.unpack(orginalTable)}
 end
 
-main()
+numOfRuns = 10
+format = "%1.7f"
+for i = 1, numOfRuns do
+	print(i..". run:")
+	main()
+end
+times2 = {times['QuickSort'], times['QuickSort2'], times['BubbleSort']}
+bSort.sort(times2)
+print("\nResults after "..numOfRuns.." runs: ")
+print("QuickSort : "..string.format(format, times["QuickSort"]))
+print("QuickSort2: "..string.format(format, times["QuickSort2"]))
+print("BubbleSort: "..string.format(format, times["BubbleSort"]))
+print("---------------------")
+print("Fastest: "..times2[1])

@@ -6,14 +6,10 @@ local arr = {}
 --so, if your arrays also start with 1, you will be able to use their functions directly."
 --	-https://www.lua.org/pil/11.1.html
 function quickSort.sort(pArr)
-	if pArr == nil then
-		pArr = { -1 }
-	end
+	if pArr == nil then pArr = { -1 } end
 	arr = pArr
 	local len = #arr
-	if len <= 1 then
-		return arr
-	end
+	if len <= 1 then return arr end
 	quickSort.sorter(1, len)
 	return arr
 end

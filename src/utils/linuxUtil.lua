@@ -10,7 +10,7 @@ function linuxUtil.updateColored(cleanAfter)
 	OS_command("sudo apt dist-upgrade")
 	if (console.askUser("Manual package install? [Y/n]")) then
 		io.write("Intput list of packages -> package1 package2...\n")
-		addMultiplePackages(io.read())
+		linuxUtil.addMultiplePackages(io.read())
 	end
 	if(clean) then
 		code.coloredText(255, 255, 0, "Cleaning started!")
@@ -23,7 +23,7 @@ function linuxUtil.updateColored(cleanAfter)
 	end
 end
 
-function addMultiplePackages(packageList)
+function linuxUtil.addMultiplePackages(packageList)
 	--the "[^%s]+" pattern matches to every non-empty string in between space characters
 	for token in string.gmatch(packageList, "[^%s]+") do
 		OS_command("sudo apt install "..token)

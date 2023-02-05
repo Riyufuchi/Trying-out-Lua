@@ -2,14 +2,10 @@ local quickSortV2 = {}
 local arr = {}
 
 function quickSortV2.sort(pArr)
-	if pArr == nil then
-		pArr = { -1 }
-	end
+	if pArr == nil then pArr = { -1 } end
 	arr = pArr
 	local len = #arr
-	if len <= 1 then
-		return arr
-	end
+	if len <= 1 then return arr end
 	quickSortV2.sorter(1, len)
 	return arr
 end

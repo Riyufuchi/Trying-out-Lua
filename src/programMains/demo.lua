@@ -7,7 +7,7 @@ local flag = require("misc/flag")
 function main()
 	--textColor = Color:new(nil, 105, 255, 180)
 	textColor = Color:new(nil, 0, 255, 255)
-	code.createColoredHeader(textColor:getColor(), "Hello world, from ".. _VERSION)
+	code.createColoredHeader(textColor:getColor(), "\v  Hello world from ".. _VERSION.."\v")
 	flag.drawFlagColored()
 	util.updateColored(true)
 end

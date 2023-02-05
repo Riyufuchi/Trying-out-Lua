@@ -3,3 +3,6 @@ bin/
 
 #File types
 *.csv
+
+#Files
+testingDemo.lua
