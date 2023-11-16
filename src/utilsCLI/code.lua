@@ -1,8 +1,8 @@
 local code = {}
 
-function code.createHeader(a)
+function code.createHeader(text)
 	local line = code.createLine(text)
-	io.write(line.."\n"..a.."\n"..line.."\n".."\a") --\a -> bell
+	io.write(line.."\n"..text.."\n"..line.."\n".."\a") --\a -> bell
 end
 
 function code.createColoredHeader(r, g, b, text)
