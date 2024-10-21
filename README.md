@@ -1,20 +1,25 @@
-# Trying-out-Lua
+# LuaFunKit Library
+
+- [About](#about)
+- [Create executable](#create-executable)
+- [Content](#content)
+- [Donate](#donate)
+
+## About
+
 <table>
     <tr>
-        <th colspan="2">Tested on</th>
+        <th colspan="2">LuaFunKit Library</th>
     </tr>
      <tr>
-        <th>OS</th>
         <th>Lua version</th>
-    </tr>
-    <tr>
-        <td>Ubuntu 22.04</td>
-        <td>5.4.4</td>
+        <td>5.4.6</td>
     </tr>
 </table>
+
 <hr>
 
-### Create "executable"
+## Create executable
 0. Note: You have to install Lua for this to work - [download Lua here](https://www.lua.org/download.html "https://www.lua.org/download")
 1. There are more terminal options in Linux, this is just example (you can use Lua on Windows too)
 2. Specify path to "main" Lua file "cd /path/folder;"
@@ -26,7 +31,7 @@ gnome-terminal --tab --title="Title" --command="bash -c 'lua demo.lua; $SHELL'"
 
 <hr>
 
-### Content
+## Content
 
 <table>
     <tr>
@@ -104,6 +109,6 @@ gnome-terminal --tab --title="Title" --command="bash -c 'lua demo.lua; $SHELL'"
 </table>
 <hr>
 
-### Donate
+## Donate
 
 <a href='https://ko-fi.com/P5P11WTFL' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>

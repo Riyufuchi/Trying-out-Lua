@@ -12,9 +12,10 @@ end
 
 function bubbleSort.sorter(indexMin, indexMax)
 	local change = true
+	indexMax = indexMax - 1
 	while change do
 		change = false
-		for i = indexMin, indexMax - 1 do
+		for i = indexMin, maxIndex do
 			if arr[i] > arr[i + 1] then
 				arr[i], arr[i + 1] = arr[i + 1], arr[i]
 				change = true
