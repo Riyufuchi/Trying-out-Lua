@@ -1,7 +1,7 @@
 local libInfo = {}
 
 function libInfo.libVersion()
-	return "4.2"
+	return "4.3"
 end
 
 function libInfo.aboutLib()

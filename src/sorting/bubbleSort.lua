@@ -12,7 +12,7 @@ end
 
 function bubbleSort.sorter(indexMin, indexMax)
 	local change = true
-	indexMax = indexMax - 1
+	local maxIndex = indexMax - 1
 	while change do
 		change = false
 		for i = indexMin, maxIndex do
