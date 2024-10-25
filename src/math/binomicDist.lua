@@ -10,7 +10,7 @@ function binoDist.printFormula(k, p, n)
 end
 
 function binoDist.distribute(k, p, n)
-	return com.combinationNumber(n, k) * p^k * (1 - p)^(n - k)
+	return com.combinationNumber(n, k) * (p^k) * (1 - p)^(n - k)
 end
 
 return binoDist
